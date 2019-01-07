@@ -6,6 +6,7 @@
   "author": "George <41060780+H3OX@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "hbs": "^4.0.1"
   }
 }

@@ -1,4 +1,7 @@
-const app = require('express')();
+const express = require('express');
+const app = express();
+const hbs = require('hbs');
+
 
 app.get('/', (req, res) => {
     res.send({
@@ -10,8 +13,24 @@ app.get('/', (req, res) => {
     })
 })
 
+app.set('view engine', 'hbs')
+app.use(express.static(__dirname + '/public'))
+
 app.get('/about', (req, res) => {
-    res.send('<h1>About this page</h1>')
+    res.render('about.hbs', {
+        pageTitle: 'About page',
+        year: new Date().getFullYear()
+    })
+})
+
+app.get('/home', (req, res) => {
+    res.render('home.hbs', {
+        name: 'George',
+        year: new Date().getFullYear(),
+        day: new Date().getDay(),
+        hrs: new Date().getHours(),
+        mins: new Date().getMinutes()
+    })
 })
 
 app.get('/bad', (req, res) => {
