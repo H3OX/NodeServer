@@ -6,7 +6,7 @@
   "author": "George <41060780+H3OX@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js -e js, hbs"
   },
   "dependencies": {
     "express": "^4.16.4",
