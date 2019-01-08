@@ -5,6 +5,9 @@
   "repository": "https://github.com/H3OX/NodeServer.git",
   "author": "George <41060780+H3OX@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^4.16.4",
     "hbs": "^4.0.1"
