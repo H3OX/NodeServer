@@ -3,8 +3,10 @@
     <title>Welcome page</title>
     <h1>Hello! My name is {{name}} and welcome to my first HBS page template</h1>
     <body>
-        <p>Today is {{day}}</p>
-        <p>Current time: {{hrs}}:{{mins}}</p>
-        <footer>Copyright {{year}}</footer>
+        {{> header}}
+
+        <p>{{screamIt 'welcome to my website'}}</p>
+
+        {{> footer}}
     </body>
 </html>
